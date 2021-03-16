@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -it q/docker-kdb q -p 5001
+docker run -p 5001:5001 -it q/docker-kdb q -p 5001

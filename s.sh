@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -it q/docker-kdb /bin/sh
+docker run -it q/docker-kdb /bin/bash

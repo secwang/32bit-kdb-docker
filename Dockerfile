@@ -1,5 +1,5 @@
 # Declare the alpine linux base image
-FROM i386/alpine:3.8
+FROM i386/alpine:3.9
 
 MAINTAINER SECWANG 
 
@@ -10,7 +10,7 @@ ENV PATH ${PATH}:${QHOME}/l32/
 # Refresh / Update the base image using alpine's package manager "apk", and binutils to allow use of e.g. tar/ar while building
 RUN apk update \
 && apk add --update binutils \
-&& apk add --update dpkg 
+&& apk add --update bash
 
 RUN LIBC32_DEB=libc6-i386_2.19-18+deb8u10_amd64.deb \
   && wget "http://ftp.us.debian.org/debian/pool/main/g/glibc/libc6-i386_2.19-18+deb8u10_amd64.deb" \
